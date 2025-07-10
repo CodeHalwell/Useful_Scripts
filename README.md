@@ -55,7 +55,7 @@ In the `general` directory, you'll find templates for everyday programming tasks
 * Web scraping
 * Batch renaming of files
 * Utility helpers for setting random seeds, downloading files and timing code
-* Common DataFrame operations and visualisation helpers
+* Common DataFrame operations and visualization helpers
 
 ### Machine Learning Templates
 The machine_learning directory offers templates for various components of machine learning projects, including:
