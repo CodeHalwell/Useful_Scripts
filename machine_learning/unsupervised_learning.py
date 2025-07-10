@@ -5,7 +5,7 @@ from sklearn.manifold import TSNE
 
 def run_kmeans(X, n_clusters: int = 8, random_state: int = 42):
     """Cluster ``X`` using k-means and return the fitted model and labels."""
-    model = KMeans(n_clusters=n_clusters, random_state=random_state)
+    model = KMeans(n_clusters=n_clusters, random_state=random_state, n_init=10)
     labels = model.fit_predict(X)
     return model, labels
 
