@@ -22,7 +22,7 @@ def set_seed(seed: int = 42) -> None:
         import torch  # type: ignore
         torch.manual_seed(seed)
         torch.cuda.manual_seed_all(seed)
-    except Exception:
+    except ImportError:
         pass
 
 
