@@ -9,7 +9,7 @@ class Generator(nn.Module):
         super().__init__()
         self.net = nn.Sequential(
             nn.Linear(noise_dim, 256),
-            nn.ReLU(True),
+            nn.ReLU(),
             nn.Linear(256, 512),
             nn.ReLU(True),
             nn.Linear(512, img_shape),
