@@ -9,7 +9,7 @@ class SimpleRNNModel(nn.Module):
         self.rnn = nn.RNN(input_size, hidden_size, num_layers, batch_first=True)
         self.fc = nn.Linear(hidden_size, output_size)
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         out, _ = self.rnn(x)
         return self.fc(out[:, -1, :])
 
