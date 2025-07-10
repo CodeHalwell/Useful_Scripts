@@ -26,7 +26,7 @@ def scale_numeric_features(X_train: pd.DataFrame, X_test: pd.DataFrame):
 
 def encode_categorical_features(X_train: pd.DataFrame, X_test: pd.DataFrame, categorical_columns):
     """One-hot encode categorical columns and return transformed DataFrames."""
-    encoder = OneHotEncoder(handle_unknown="ignore", sparse=False)
+    encoder = OneHotEncoder(handle_unknown="ignore", sparse_output=False)
     train_encoded = encoder.fit_transform(X_train[categorical_columns])
     test_encoded = encoder.transform(X_test[categorical_columns])
     X_train_rest = X_train.drop(columns=categorical_columns).reset_index(drop=True)
