@@ -24,7 +24,7 @@ def text_generation_pipeline(model_name: str):
 
 def fine_tune_text_classification(model_name: str, train_dataset, eval_dataset, epochs: int = 1):
     """Fine-tune a transformer for text classification using Hugging Face Trainer."""
-    model = AutoModelForCausalLM.from_pretrained(model_name)
+    model = AutoModelForSequenceClassification.from_pretrained(model_name)
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     args = TrainingArguments(output_dir="./tmp_trainer", num_train_epochs=epochs, logging_steps=10)
     trainer = Trainer(model=model, args=args, train_dataset=train_dataset, eval_dataset=eval_dataset, tokenizer=tokenizer)
