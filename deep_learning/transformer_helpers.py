@@ -26,6 +26,8 @@ def fine_tune_text_classification(model_name: str, train_dataset, eval_dataset, 
     """Fine-tune a transformer for text classification using Hugging Face Trainer."""
     model = AutoModelForSequenceClassification.from_pretrained(model_name)
     tokenizer = AutoTokenizer.from_pretrained(model_name)
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
     args = TrainingArguments(output_dir="./tmp_trainer", num_train_epochs=epochs, logging_steps=10)
     trainer = Trainer(model=model, args=args, train_dataset=train_dataset, eval_dataset=eval_dataset, tokenizer=tokenizer)
     trainer.train()
