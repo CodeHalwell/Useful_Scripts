@@ -49,11 +49,13 @@ Each section contains subdirectories for specific templates, along with a README
 
 ### General Purpose Scripts
 
-In the general directory, you'll find templates for everyday programming tasks that can help you automate workflows, process data, and more. Examples include:
+In the `general` directory, you'll find templates for everyday programming tasks that can help you automate workflows, process data, and more. Examples include:
 
 * CSV file manipulation
 * Web scraping
 * Batch renaming of files
+* Utility helpers for setting random seeds, downloading files and timing code
+* Common DataFrame operations and visualisation helpers
 
 ### Machine Learning Templates
 The machine_learning directory offers templates for various components of machine learning projects, including:
@@ -66,8 +68,11 @@ The machine_learning directory offers templates for various components of machin
 ### Deep Learning Templates
 Our deep_learning section includes templates designed for neural network projects, with examples for:
 
-* Convolutional Neural Networks (CNNs) for image classification
-* Recurrent Neural Networks (RNNs) for time series analysis
+* Convolutional Neural Networks (CNNs) including simple ResNet examples
+* Recurrent Neural Networks (RNNs, LSTMs, and GRUs) for sequence modeling
+* Transformer utilities for working with large language models and fine-tuning
+* Graph Neural Networks (GCN, GAT, and GraphSAGE layers)
+* Reinforcement learning helpers from Q-learning to DQN
 * Generative Adversarial Networks (GANs) for image generation
 
 ### How to Use the Templates
